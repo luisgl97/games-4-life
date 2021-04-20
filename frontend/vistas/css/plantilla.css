@@ -1,146 +1,243 @@
-/*=============================================
+/*==============================================
 GLOBAL
-=============================================*/
+==============================================*/
 
-*{
-	margin:0px;
-	padding:0px;
-	list-style: none;
-	text-decoration: none;
-	font-family: 'Ubunt', sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubunt', sans-serif;
 }
 
-ul, ol{
-	padding:0px;
+ul,
+ol {
+    padding: 0px;
 }
 
-a:visited, a:link, a:focus, a:hover, a:active{
-	list-style: none;
-	text-decoration: none;
+a:visited,
+a:link,
+a:focus,
+a:hover,
+a:active {
+    list-style: none;
+    text-decoration: none;
 }
 
-.barraSuperior{
-	background:black;
+.barraSuperior {
+    background: black;
 }
 
-.barraSuperior a{
-	color:white;
+.barraSuperior a {
+    color: white;
 }
 
-.backColor, .backColor a{
-	background:#47bac1;
-	color:white;
+.backColor,
+.backColor a {
+    background: #00ffff;
+    color: black;
 }
 
-.fondoBreadcrumb{
-	margin-bottom:0px;
-	background: rgba(0,0,0,0);
+.fondoBreadcrumb {
+    margin-bottom: 0px;
+    background: rgba(0, 0, 0, 0);
 }
+
 
 /*=============================================
 REDES SOCIALES
 =============================================*/
 
-.redSocial{
-	width:30px;
-	height:30px;
-	text-align: center;
-	line-height:30px;
+.redSocial {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
+
 
 /*FACEBOOK*/
 
-.facebookBlanco{
-	color:white;
+.facebookBlanco {
+    color: white;
 }
 
-.facebookNegro{
-	color:black;
+.facebookNegro {
+    color: black;
 }
 
-.facebookColor{
-	color:white;
-	background:#46639f;
+.facebookColor {
+    color: white;
+    background: #46639f;
 }
+
 
 /*YOUTUBE*/
 
-.youtubeColor{
-	color:white;
-	background:#d6513e;
+.youtubeColor {
+    color: white;
+    background: #d6513e;
 }
 
-.youtubeBlanco{
-	color:white;
+.youtubeBlanco {
+    color: white;
 }
 
-.youtubeNegro{
-	color:black;
+.youtubeNegro {
+    color: black;
 }
+
 
 /*TWITTER*/
 
-.twitterColor{
-	color:white;
-	background:#0ab2e6;
+.twitterColor {
+    color: white;
+    background: #0ab2e6;
 }
 
-.twitterBlanco{
-	color:white;
+.twitterBlanco {
+    color: white;
 }
 
-.twitterNegro{
-	color:black;
+.twitterNegro {
+    color: black;
 }
+
 
 /*GOOGLE PLUS*/
 
-.googleColor{
-	color:white;
-	background:#d71617;
+.googleColor {
+    color: white;
+    background: #d71617;
 }
 
-.googleBlanco{
-	color:white;
+.googleBlanco {
+    color: white;
 }
 
-.googleNegro{
-	color:black;
+.googleNegro {
+    color: black;
 }
+
 
 /*INSTAGRAM*/
 
-.instagramColor{
-	color:white;
-	background:linear-gradient(45deg, #fca925, #ee1d5f,  #6350a2);
-
+.instagramColor {
+    color: white;
+    background: linear-gradient(45deg, #fca925, #ee1d5f, #6350a2);
 }
 
-.instagramBlanco{
-	color:white;
+.instagramBlanco {
+    color: white;
 }
 
-.instagramNegro{
-	color:black;
+.instagramNegro {
+    color: black;
 }
+
 
 /*=============================================
-ERROR 404, VERIFICAR
+ERROR 404
 =============================================*/
 
-.error404. .verificar{
-	color:#333;
+.error404 {
+    color: #333;
 }
+
 
 /*=============================================
 SCROLL UP
 =============================================*/
-#scrollUp{
-	bottom: 20px;
-	right: 20px;
-	width: 50px;
-	height: 50px;
-	background: url(../img/plantilla/flecha.jpg);
+
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/plantilla/flecha.jpg);
+}
+
+@media only screen and (max-width:1000px) {
+    #companyinfo {
+        width: 20%
+    }
+    #sitelink {
+        font-size: 30px
+    }
+    #txt5,
+    #txt4 {
+        font-size: 17px
+    }
+    #txt5,
+    .social {
+        position: relative;
+        top: -5px
+    }
+}
+
+@media only screen and (max-width:850px) {
+    #companyinfo {
+        position: relative;
+        left: 3%
+    }
+    #txt6 {
+        position: relative;
+        left: 3%
+    }
+    #txt1,
+    #txt2,
+    #txt3,
+    #txt4,
+    #txt5 {
+        font-size: 15px
+    }
+    #explore {
+        position: relative;
+        top: -240px;
+        left: 26%
+    }
+    #sitelink {
+        font-size: 25px
+    }
+    #detail {
+        font-size: 13px
+    }
+    .link {
+        width: 60px
+    }
+    #visit {
+        position: relative;
+        top: -520px;
+        left: 37%
+    }
+    .text {
+        font-size: 13px
+    }
+    #legal {
+        position: relative;
+        top: -800px;
+        left: 54%
+    }
+    #subscribe {
+        position: relative;
+        top: -1080px;
+        left: 76%;
+        width: 20%
+    }
+    #txt5,
+    .social {
+        position: relative;
+        left: -110%;
+        top: px
+    }
+    #email,
+    .btn {
+        position: relative;
+        top: 0px
+    }
+    #part1 {
+        height: 250px
+    }
 }
 
 
@@ -148,90 +245,57 @@ SCROLL UP
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
 
-@media (min-width:1200px){
-
-	.col-lg-0{
-		display: none;
-	}
-
-	.error404 h1{
-		font-size:300px;
-		text-shadow:8px 8px 1px #dadada;
-	}
-
-	.verificar h3{
-		margin-top:30px;
-		font-size:100px;
-		text-shadow:4px 4px 1px #dadada;
-	}
-
+@media (min-width:1200px) {
+    .col-lg-0 {
+        display: none;
+    }
+    .error404 h1 {
+        font-size: 300px;
+        text-shadow: 8px 8px 1px #dadada;
+    }
 }
+
 
 /*=============================================
 ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 =============================================*/
 
-@media (max-width:1199px) and (min-width:992px){
-
-	.col-md-0{
-		display: none;
-	}
-
-	.error404 h1{
-		font-size:200px;
-		text-shadow:6px 6px 1px #dadada;
-	}
-
-	.verificar h3{
-		margin-top:30px;
-		font-size:100px;
-		text-shadow:4px 4px 1px #dadada;
-	}
-
+@media (max-width:1199px) and (min-width:992px) {
+    .col-md-0 {
+        display: none;
+    }
+    .error404 h1 {
+        font-size: 200px;
+        text-shadow: 6px 6px 1px #dadada;
+    }
 }
+
 
 /*=============================================
 ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 =============================================*/
 
-@media (max-width:991px) and (min-width:768px){
-
-	.col-sm-0{
-		display: none;
-	}
-
-	.error404 h1{
-		font-size:150px;
-		text-shadow:4px 4px 1px #dadada;
-	}
-
-	.verificar h3{
-		margin-top:30px;
-		font-size:100px;
-		text-shadow:4px 4px 1px #dadada;
-	}
-
+@media (max-width:991px) and (min-width:768px) {
+    .col-sm-0 {
+        display: none;
+    }
+    .error404 h1 {
+        font-size: 150px;
+        text-shadow: 4px 4px 1px #dadada;
+    }
 }
+
 
 /*=============================================
 MOVIL (XS revisamos en 320px)
 =============================================*/
 
-@media (max-width:767px){
-
-	.col-xs-0{
-		display: none;
-	}
-
-	.error404 h1{
-		font-size:75px;
-		text-shadow:2px 2px 1px #dadada;
-	}
-
-	.verificar h3{
-		margin-top:30px;
-		font-size:50px;
-		text-shadow:2px 2px 1px #dadada;
-	}
-
+@media (max-width:767px) {
+    .col-xs-0 {
+        display: none;
+    }
+    .error404 h1 {
+        font-size: 75px;
+        text-shadow: 2px 2px 1px #dadada;
+    }
 }

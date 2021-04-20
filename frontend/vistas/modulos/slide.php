@@ -14,7 +14,7 @@ SLIDESHOW
 
 			<?php
 
-				$servidor = Ruta::ctrRutaServidor();
+			$servidor = Ruta::ctrRutaServidor();
 
 				$slide = ControladorSlide::ctrMostrarSlide();
 
@@ -31,6 +31,7 @@ SLIDESHOW
 							<img src="'.$servidor.$value["imgFondo"].'">
 
 							<div class="slideOpciones '.$value["tipoSlide"].'">';
+
 
 							if($value["imgProducto"] != ""){
 								
@@ -59,7 +60,6 @@ SLIDESHOW
 						</li>';
 
 				}
-
 			?>		
 
 		</ul>
