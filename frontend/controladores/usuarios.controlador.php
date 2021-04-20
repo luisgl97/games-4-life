@@ -94,7 +94,7 @@ class ControladorUsuarios{
 
 					$envio = $mail->Send();
 
-					if(!$envio){
+					if($envio){
 
 						echo '<script> 
 
