@@ -8,12 +8,14 @@ class ControladorUsuarios{
 
 	public function ctrRegistroUsuario(){
 
-		if(isset($_POST["regUsuario"])){
+		if(isset($_POST["regUsuario"])){//Si viene informacion de Registro de usuario
 
+			//Al igual que en java script "preg_match" nos sirve para validar, primero va la expresion regular y luego la variable POST
 			if(preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["regUsuario"]) &&
 			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["regEmail"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["regPassword"])){
 
+				//crypt (variable post y el parametro salt modo blowfish)
 			   	$encriptar = crypt($_POST["regPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 			   	$encriptarEmail = md5($_POST["regEmail"]);
@@ -36,7 +38,7 @@ class ControladorUsuarios{
 					VERIFICACIÓN CORREO ELECTRÓNICO
 					=============================================*/
 
-					date_default_timezone_set("America/Bogota");
+					date_default_timezone_set("America/Lima");
 
 					$url = Ruta::ctrRuta();	
 
@@ -46,14 +48,19 @@ class ControladorUsuarios{
 
 					$mail->isMail();
 
+					//Desde donde se envia el mensaje y el nombre de la empresa
 					$mail->setFrom('cursos@tutorialesatualcance.com', 'Tutoriales a tu Alcance');
 
+					//A donde se va a responder el correo
 					$mail->addReplyTo('cursos@tutorialesatualcance.com', 'Tutoriales a tu Alcance');
 
+					//Contenido del correo 
 					$mail->Subject = "Por favor verifique su dirección de correo electrónico";
 
+					//A cual correo se va a enviar el correo del cliente
 					$mail->addAddress($_POST["regEmail"]);
 
+					//Plantilla html del correo
 					$mail->msgHTML('<div style="width:100%; background:#eee; position:relative; font-family:sans-serif; padding-bottom:40px">
 						
 						<center>
@@ -141,9 +148,11 @@ class ControladorUsuarios{
 				}
 
 			}else{
+				//plugin swal mensaje de alerta
 
+				//function(isConfirm) si confirma la alerta regresa a la pagina anterior
 				echo '<script> 
-
+						
 						swal({
 							  title: "¡ERROR!",
 							  text: "¡Error al registrar el usuario, no se permiten caracteres especiales!",
@@ -153,7 +162,7 @@ class ControladorUsuarios{
 							},
 
 							function(isConfirm){
-
+								
 								if(isConfirm){
 									history.back();
 								}
