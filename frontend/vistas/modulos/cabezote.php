@@ -488,7 +488,7 @@ VENTANA MODAL PARA EL REGISTRO
 				</div>
 
 				<!--=====================================
-				https://www.iubenda.com/ CONDICIONES DE USO Y POLÍTICAS DE PRIVACIDAD
+				https://www.iubenda.com/ POLÍTICAS DE PRIVACIDAD y CONDICIONES DE USO 
 				======================================-->
 
 				<div class="checkBox">

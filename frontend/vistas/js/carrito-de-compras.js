@@ -844,7 +844,7 @@ $("#cambiarDivisa").change(function() {
 
     $.ajax({
 
-        url: "http://free.currconv.com/api/v7/convert?q=" + divisaBase + "_" + divisa + "&compact=ultra&apiKey=a01ebaf9a1c69eb4ff79",
+        url: "https://free.currconv.com/api/v7/convert?q=" + divisaBase + "_" + divisa + "&compact=ultra&apiKey=a01ebaf9a1c69eb4ff79",
         type: "GET",
         cache: false,
         contentType: false,

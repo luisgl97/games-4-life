@@ -32,6 +32,8 @@ $("#regEmail").change(function() {
     var datos = new FormData();
     datos.append("validarEmail", email);
 
+    //Enviamos una solicitud AJAX
+
     $.ajax({
 
         url: rutaOculta + "ajax/usuarios.ajax.php",
@@ -79,7 +81,7 @@ function registroUsuario() {
 
     var nombre = $("#regUsuario").val();
 
-    if (nombre != "") {
+    if (nombre != "") { //esta lleno el campo de nombre
 
         var expresion = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$/; //expresion regular
 
