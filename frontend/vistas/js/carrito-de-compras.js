@@ -262,7 +262,8 @@ $(".agregarCarrito").click(function() {
 
             for (var i = 0; i < listaProductos.length; i++) {
 
-                if (listaProductos[i]["idProducto"] == idProducto && listaProductos[i]["tipo"] == "virtual") {
+                // if (listaProductos[i]["idProducto"] == idProducto && listaProductos[i]["tipo"] == "virtual") {
+                if (listaProductos[i]["idProducto"] == idProducto) {
 
                     swal({
                         title: "El producto ya está agregado al carrito de compras",
@@ -638,7 +639,7 @@ $("#btnCheckout").click(function() {
     }
 
     /*=============================================
-    EXISTEN PRODUCTOS FÍSICOS
+    SELECCIONE EL PAIS PARA EL ENVIO
     =============================================*/
 
     if (tipoArray.find(checkTipo) == "fisico") {
@@ -654,6 +655,7 @@ $("#btnCheckout").click(function() {
 
         $(".btnPagar").attr("tipo", "fisico");
 
+        // countries json   ;  link: https://gist.github.com/keeguon/2310008
         $.ajax({
             url: rutaOculta + "vistas/js/plugins/countries.json",
             type: "GET",
@@ -797,6 +799,8 @@ function divisas(metodoPago) {
 
     if (metodoPago == "paypal") {
 
+        // https://developer.paypal.com/docs/api/reference/currency-codes/
+
         $("#cambiarDivisa").append('<option value="USD">USD</option>' +
             '<option value="EUR">EUR</option>' +
             '<option value="GBP">GBP</option>' +
@@ -841,6 +845,8 @@ $("#cambiarDivisa").change(function() {
     }
 
     var divisa = $(this).val();
+
+    // https://free.currencyconverterapi.com/
 
     $.ajax({
 

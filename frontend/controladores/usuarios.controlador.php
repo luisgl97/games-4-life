@@ -595,6 +595,7 @@ class ControladorUsuarios{
 
 		if($emailRepetido || $respuesta1 == "ok"){
 
+			//Modelo para verificar si esta registrado el usuario
 			$respuesta2 = ModeloUsuarios::mdlMostrarUsuario($tabla, $item, $valor);
 
 			if($respuesta2["modo"] == "facebook"){
